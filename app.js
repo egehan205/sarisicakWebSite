@@ -6,20 +6,33 @@ const ejs = require("ejs");
 const _ = require("lodash");
 
 const homeStartingContent =
-  "Lacus vel facilisis volutpat est velit egestas dui id ornare. Semper auctor neque vitae tempus quam. Sit amet cursus sit amet dictum sit amet justo. Viverra tellus in hac habitasse. Imperdiet proin fermentum leo vel orci porta. Donec ultrices tincidunt arcu non sodales neque sodales ut. Mattis molestie a iaculis at erat pellentesque adipiscing. Magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Adipiscing elit ut aliquam purus sit amet luctus venenatis lectus. Ultrices vitae auctor eu augue ut lectus arcu bibendum at. Odio euismod lacinia at quis risus sed vulputate odio ut. Cursus mattis molestie a iaculis at erat pellentesque adipiscing.";
-const aboutContent =
-  "Hac habitasse platea dictumst vestibulum rhoncus est pellentesque. Dictumst vestibulum rhoncus est pellentesque elit ullamcorper. Non diam phasellus vestibulum lorem sed. Platea dictumst quisque sagittis purus sit. Egestas sed sed risus pretium quam vulputate dignissim suspendisse. Mauris in aliquam sem fringilla. Semper risus in hendrerit gravida rutrum quisque non tellus orci. Amet massa vitae tortor condimentum lacinia quis vel eros. Enim ut tellus elementum sagittis vitae. Mauris ultrices eros in cursus turpis massa tincidunt dui.";
-const contactContent =
-  "Scelerisque eleifend donec pretium vulputate sapien. Rhoncus urna neque viverra justo nec ultrices. Arcu dui vivamus arcu felis bibendum. Consectetur adipiscing elit duis tristique. Risus viverra adipiscing at in tellus integer feugiat. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Consequat interdum varius sit amet mattis. Iaculis nunc sed augue lacus. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Pulvinar elementum integer enim neque. Ultrices gravida dictum fusce ut placerat orci nulla. Mauris in aliquam sem fringilla ut morbi tincidunt. Tortor posuere ac ut consequat semper viverra nam libero.";
+  "";
+const aboutContent = [
+  "   Yaşıtlarına göre değerlendirildiğinde bedensel, bilişsel, sosyal, duygusal, öz bakım yönünden fark edilir biçimde yetersizliği bulunan bireylere “özel eğitime ihtiyaç duyan bireyler” denir. Bu bireylerin yetersizliklerinden en az düzeyde etkilenmesini sağlamak, bireylerin toplumla kaynaşmasına ve bağımsız olarak yaşayabilmelerine destek vermek amacıyla; bireylerin yetersizliklerine uygun ortamlarda, onlar için geliştirilmiş özel yöntemlerle sürdürülen eğitime ise “özel eğitim” denir. ",
+  "   Bizde Milas Sarı Sıcak Özel Eğitim ve Rehabilitasyon Merkezi olarak 2007 yılından itibaren özel eğitime ihtiyaç duyan bireylerimize, açılış tarihinden aralıksız hizmet vermekteyiz. Merkezimiz bünyesinde fizik tedavi salonumuz, işitme engelliler bireysel-grup odamız, yaygın gelişimsel bireysel-grup odamız, zihinsel engelliler bireysel, zihinsel engelliler grup odamız, psikolojik destek odamız bulunmaktadır.",
+  "   Eğitim merkezimizin kuruluşunda benimsediğimiz ilke ulu önder M. Kemal Atatürk’ün “Eğitimde feda edilecek tek bir fert yoktur.” sözüdür.  Bu söz aynı zamanda okulumuzun vizyonunu da ifade etmektedir. Yetersizliği olan bireylerin topluma kazandırılmasını sağlamak, bağımsız yaşayabilmelerine destek vermek, bu süreçte kendilerine ve ailelerine rehberlik etmek ise benimsediğimiz misyonumuzdur. ",
+  "   Merkezimiz; zihinsel, sosyal, görsel, ruhsal, duyusal, bedensel, konuşma, davranış ve öz bakım gibi alanlarda sorun yaşayan bireylere yönelik kurulmuş ve bu doğrultuda hizmet veren bir özel eğitim ve rehabilitasyon kurumudur. Normal yaşamın gereklerine uyamama durumunda olan bireylerin fonksiyon kayıplarını gidermek ve onlara toplum içinde kendi kendilerine yeterli olmalarını sağlayıcı beceriler kazandırmak temel amacımızdır. Ayrıca, özel eğitim ve rehabilitasyon hizmetlerine ihtiyaç duyan bireyler ve ailelerine rehberlik etmek ve alana yönelik araştırmalar yaparak sağlıklı bilgiler edinmek de amaçlarımız arasında yer almaktadır. Eğitim merkezimiz de çalışan tüm personel birbiriyle iş birliği içinde olduğu gibi, merkezimizde hizmet verdiğimiz bireyler ve ailelerle de iş birliği içindeyiz. Aile danışmanlığı hizmetimiz ile ailelerimizin zorlu süreçlerinde her daim yanında olmakla birlikte	sahip	oldukları yasal haklarla ilgili bilgilendirmeler yapmaktayız.Günümüz şartlarına uygun nitelik ve kalitede hizmet vermek amacını ilke edinmiş olan merkezimiz, hedeflediği hizmet kalitesini sunmak için; mevcut rezerv kapasitesi, fiziksel donanımı, tecrübeli uzman kadrosu ve özellikle ileriye yönelik kalıcı bilimsel plan, program ve çalışmaları ile hizmetlerini yürütmektedir.",
+  "   Çocuklarımız için, geleceğimiz için, birlikte başarmak için; merkezimizi bizzat gelip görmeniz ve sizinle tanışmamız bizleri mutlu edecektir. Çocuğunuzun geleceği için bizlere bir saat zamanınızı ayırmanız demek, belki de onun yaşamında çok şeyin değişmesi demektir. İnanın bizimle görüştükten sonra daha önce neleri kaybettiğinizi ve bundan sonra neleri kazanacağınızı anlayacaksınız. Hizmetlerini deneyimli ve konusunda uzman kadrosuyla kat kat fazlasıyla sunan merkezimiz, yılların tecrübesiyle sizin her zaman yanınızda.",
+];
 
-const emplyeeContent =
-  "Scelerisque eleifend donec pretium vulputate sapien. Rhoncus urna neque viverra justo nec ultrices. Arcu dui vivamus arcu felis bibendum. Consectetur adipiscing elit duis tristique. Risus viverra adipiscing at in tellus integer feugiat. Sapien nec sagittis aliquam malesuada bibendum arcu vitae. Consequat interdum varius sit amet mattis. Iaculis nunc sed augue lacus. Interdum posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Pulvinar elementum integer enim neque. Ultrices gravida dictum fusce ut placerat orci nulla. Mauris in aliquam sem fringilla ut morbi tincidunt. Tortor posuere ac ut consequat semper viverra nam libero.";
+const aboutPrograms = [
+  "Zihinsel Engelli Bireyler Destek Eğitim Programı",
+  "Yaygın Gelişimsel Bozukluklar Destek Eğitim Programı",
+  "İşitme Engelli Bireyler Destek Eğitim Programı",
+  "Bedensel Engelli Bireyler Destek Eğitim Programı",
+];
+const contactContent =
+  "";
+
+const employeeContent =
+  "";
 
 posts = [
   {
     title: "asdasdasda",
     image: "images/Mustafa_Kemal_Atatürk.jpg",
-    content: "Lacus vel facilisis volutpat est velit egestas dui id ornare. Semper auctor neque vitae tempus quam. Sit amet cursus sit amet dictum sit amet justo. Viverra tellus in hac habitasse. Imperdiet proin fermentum leo vel orci porta. Donec ultrices tincidunt arcu non sodales neque sodales ut. Mattis molestie a iaculis at erat pellentesque adipiscing. Magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Adipiscing elit ut aliquam purus sit amet luctus venenatis lectus. Ultrices vitae auctor eu augue ut lectus arcu bibendum at. Odio euismod lacinia at quis risus sed vulputate odio ut. Cursus mattis molestie a iaculis at erat pellentesque adipiscing.",
+    content:
+      "Lacus vel facilisis volutpat est velit egestas dui id ornare. Semper auctor neque vitae tempus quam. Sit amet cursus sit amet dictum sit amet justo. Viverra tellus in hac habitasse. Imperdiet proin fermentum leo vel orci porta. Donec ultrices tincidunt arcu non sodales neque sodales ut. Mattis molestie a iaculis at erat pellentesque adipiscing. Magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Adipiscing elit ut aliquam purus sit amet luctus venenatis lectus. Ultrices vitae auctor eu augue ut lectus arcu bibendum at. Odio euismod lacinia at quis risus sed vulputate odio ut. Cursus mattis molestie a iaculis at erat pellentesque adipiscing.",
   },
 ];
 
@@ -42,11 +55,11 @@ app.get("/contact", function (req, res) {
 });
 
 app.get("/about", function (req, res) {
-  res.render("about", { content: aboutContent });
+  res.render("about", { content: aboutContent, programs: aboutPrograms });
 });
 
 app.get("/employee", function (req, res) {
-  res.render("employee", { content: aboutContent });
+  res.render("employee", { content: employeeContent });
 });
 app.get("/activities", function (req, res) {
   res.render("activities", { content: aboutContent });

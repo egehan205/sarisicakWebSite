@@ -1,7 +1,62 @@
 <%- include("partials/header") -%>
 <div class="container">
 <h1>Hakkımızda</h1>
+<hr />
+<%content.forEach(function(post){ %>
+  <p>
+    <%= post %>
+    
+  </p> 
+<% }); %> 
 <br>
-<p><%= content %></p>
+<h3>EĞİTİM PROGRAMLARI</h2>
+    <hr>
+<h4>Merkezimiz tarafından yürütülen destek eğitim programları şunlardır:</h3>
+<ol>
+<% programs.forEach(function(prog){ %>
+    
+        <li> <%= prog %> </li>
+   
+ <% }); %> 
+</ol>
 
-<%- include("partials/footer") -%>
+
+<p><strong>"Çocuklarımız; bizim geleceğimiz, yarınlarımız, umutlarımız.
+Gelin, işbirliği yapalım ve parlak geleceğin güçlü adımlarını birlikte atalım.
+Hep birlikte onların aydınlık yarınları için çalışalım."
+</strong></p>
+
+<br>
+<h3>İLKELERİMİZ</h3>
+<hr>
+<p>Özel eğitimde başarı için; erken eğitim, sürekli ve aralıksız eğitim, profesyonel ve kaliteli eğitim kaçınılmaz olup,son derece önemlidir.
+Bu nedenle biz de <strong>“Olacaksa, en iyisi olmalı”</strong> anlayışını ilke edindik. Titizlikle çalıştık ve azimle ilerledik. Bilgiyi,
+sevgiyi ve kaliteli hizmeti birleştirdik. Yıllardır kalitemizden ve kat kat sunduğumuz hizmetlerimizden hiç taviz
+vermedik ve bunun sonucunda her zaman başarılı olduk. Yıllardır bu duruşumuzu hiç değiştirmedik. Bu anlayış ve çalışma prensibine sahip olan kurumumuz, çok sayıda çocuğumuzu topluma kazandırdı ve kazandırmaya da devam etmektedir.
+
+</p>
+<p><strong>HİÇ BİR SORUN ÇÖZÜMSÜZ DEĞİLDİR!
+YETER Kİ; İSTEYİN, KARAR VERİN, HAREKETE GEÇİN VE DOĞRU YERE MÜRACAAT EDİN.</strong></p>
+<br>
+<h3>FARKIMIZ</h3>
+<hr>
+<p><strong>FARKLIYIZ, GÜÇLÜYÜZ VE BAŞARILIYIZ. NEDEN Mİ?</strong></p>
+<ul>
+    <li>Özel eğitim alanında yılların tecrübesiyle çalışıyoruz.</li>
+    <li>Yurt içinde ve yurt dışında alanla ilgili yapılan çalışmalar ve faaliyetler, yakından takip edilmektedir.</li>
+    <li>Eğitimlerimiz deneyimli ve konusunda uzman personellerimiz tarafından kat kat fazlasıyla verilmektedir.</li>
+    <li>Aileler için her türlü sosyal imkânlar ve haklar araştırılmakta, hukuki ve mesleki rehberlik ve savunuculuk hizmetleri
+    verilmektedir.</li>
+    <li>Alana yönelik akademik çalışmalar yapılmakta, kurumun çalışmaları ve işleyişi bilimsel çalışmalarla desteklenmekte ve
+    denetlenmektedir.</li>
+    <li>Bütün çalışmalarımızda alanla ilgili her türlü meslek elemanının ve üniversitelerden akademisyenlerin desteği, görüşü ve
+    gerektiğinde katkıları alınmaktadır.</li>
+    <li>Özel eğitime yönelik yapılan inceleme, tespit ve araştırmalar çerçevesinde elde edilen sonuçlara göre yeni hizmet
+    modelleri geliştirilmektedir.</li>
+    <li>Çocukların gelişim düzeyleri belirlenmekte ve eğitim ve rehabilitasyon hizmetleri buna göre şekillendirilmektedir.</li>
+    <li>Bireylerin iş istihdamları için uygun işyerleri araştırılmakta ve onlara bu konuda gerekli rehberlik yapılmaktadır.</li>
+
+</ul>
+
+
+<%-include("partials/footer") -%>
