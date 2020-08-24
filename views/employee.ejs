@@ -1,7 +1,30 @@
 <%- include("partials/header") -%>
 <div class="container">
-    <h1>Kadromuz</h1>
-    <br>
-    <p><%= content %></p>
+  <h1>Kadromuz</h1>
+  <hr />
 
-<%- include("partials/footer") -%>
+<% for(var i = 0; i < foundStuff.length; i++) { %>
+    <% if (i === 0 || i % 4 === 0) { %>
+<div class="row">
+    
+        <% } %>
+        <div class="col-md-3">
+        <div class="card p-1" style="max-width: 15rem;">
+            <img class="card-img-top" src="images/Stuff/<%= foundStuff[i]._id %>.jpg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title"><%= foundStuff[i].name %></h5>
+                <p class="card-text"><%= foundStuff[i].department %></p>
+                <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+            </div>
+        </div>
+
+        
+        <% if (i === 3 || i % 4 === 3) { %>
+    </div>
+    <% } %>
+<% } %>
+
+
+  <%- include("partials/footer") -%>
+
