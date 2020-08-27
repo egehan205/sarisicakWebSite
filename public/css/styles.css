@@ -3,6 +3,14 @@ body {
   font-size: 16px;
 }
 
+.carousel-container {
+  width: 90%;
+  margin: auto;
+}
+a {
+  color: #ffb11f;
+}
+
 h3 {
   font-weight: 300;
   font-family: Arial, Helvetica, sans-serif;
@@ -18,14 +26,24 @@ li {
 }
 
 .container {
-  padding-top: 70px;
+  padding-top: 40px;
   padding-bottom: 70px;
+}
+
+.carousel-inner > .carousel-item > a > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  width: auto;
 }
 
 .navbar {
   padding: 15px 80px;
   border: 0;
-
   border-radius: 0;
   margin-bottom: 0;
   font-size: 12px;
@@ -139,6 +157,7 @@ li {
     font-size: 18px;
   }
 }
+
 .dropdown-submenu {
   position: absolute;
   top: 0;
@@ -154,7 +173,122 @@ li {
   color: #ffb11f;
 }
 
-.main a{
+.main a {
   text-decoration: none;
   color: #ffb11f;
+}
+
+@media screen and (max-width: 1400px) {
+  .ata_image {
+    display: none !important;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.6rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  a {
+    font-size: 1.5rem;
+  }
+  li {
+    font-size: 1.5rem;
+  }
+  .carousel-container {
+    width: 100%;
+  }
+
+  .container {
+    padding: 30px 0px;
+    padding-bottom: 70px;
+  }
+  .nav-item a {
+    font-size: 1rem;
+  }
+  .nav-item p {
+    font-size: 1rem;
+  }
+  .dropdown-submenu a {
+    font-size: 0.7rem;
+  }
+
+  .sidenav {
+    display: none !important;
+  }
+  .main {
+    margin-left: 0; /* Same width as the sidebar + left position in px */
+
+    padding: 0px 0px;
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .navbar {
+    padding: 10px 20px;
+  }
+  .nav-item a {
+    font-size: 0.8rem;
+  }
+  .nav-item p {
+    font-size: 0.8rem;
+  }
+  .dropdown-submenu a {
+    font-size: 0.55rem;
+  }
+  .dropdown-submenu {
+    position: absolute;
+    top: 0;
+    left: 265px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .ata_image {
+    display: none !important;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.6rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  a {
+    font-size: 1.5rem;
+  }
+  li {
+    font-size: 1.5rem;
+  }
+
+  .container {
+    padding: 15px 0px;
+  }
+
+  .sidenav {
+    display: none !important;
+  }
+  .main {
+    margin-left: 0; /* Same width as the sidebar + left position in px */
+
+    padding: 0px 0px;
+  }
 }

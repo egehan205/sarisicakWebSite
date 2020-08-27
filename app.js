@@ -27,10 +27,35 @@ const employeeContent = "";
 
 posts = [
   {
-    title: "asdasdasda",
-    image: "images/Mustafa_Kemal_Atatürk.jpg",
+    title: "Zihinsel Engelli Bireyler Destek Eğitim Programı",
+    image: "images/egitim-down-sendromu.jpg",
+    tag: "zihinsel",
     content:
-      "Lacus vel facilisis volutpat est velit egestas dui id ornare. Semper auctor neque vitae tempus quam. Sit amet cursus sit amet dictum sit amet justo. Viverra tellus in hac habitasse. Imperdiet proin fermentum leo vel orci porta. Donec ultrices tincidunt arcu non sodales neque sodales ut. Mattis molestie a iaculis at erat pellentesque adipiscing. Magnis dis parturient montes nascetur ridiculus mus mauris vitae ultricies. Adipiscing elit ut aliquam purus sit amet luctus venenatis lectus. Ultrices vitae auctor eu augue ut lectus arcu bibendum at. Odio euismod lacinia at quis risus sed vulputate odio ut. Cursus mattis molestie a iaculis at erat pellentesque adipiscing.",
+      "Eğitim, önceden belirlenmiş amaçlara göre insanların davranışlarında belli gelişmeler sağlamaya yarayan planlı etkinliklerdir. Ayrıca eğitim, bireylerin toplumun normlarını, standartlarını ve yaşama yollarını kazanmasında etkili olan tüm sosyal süreçlerdir. Bireyin yaşadığı toplum içinde değeri olan yetenek ve diğer davranış biçimleri geliştirdiği süreçlerin tamamı eğitim aracılığıyla edinilir",
+  },
+
+  {
+    title: "Yaygın Gelişimsel Bozukluklar Destek Eğitim Programı",
+    image: "images/ogrenmegüclügü.jpg",
+    tag: "yaygin",
+    content:
+      "Bireylerin, var olan yeterliklerinin en üst düzeyde geliştirilerek sosyal yaşama etkin katılımının artırılmasının temel yolu eğitimdir. Özel eğitime ihtiyacı olan tüm bireylerde olduğu gibi yaygın gelişimsel bozukluğu (YGB) olan bireylerde de eğitim ve ev ortamları uygun şekilde yapılandırıldığında, işlevsel eğitim programları geliştirildiğinde, öğretim süreci bireysellik esasına göre hazırlandığında, bağımsız yaşam becerilerinin edinilmesi ve toplumsal entegrasyon bağlamında önemli ilerlemeler kaydedilmektedir",
+  },
+
+  {
+    title: "İşitme Engelli Bireyler Destek Eğitim Programı",
+    image: "images/isitme2.jpg",
+    tag: "isitsel",
+    content:
+      "Doğuştan olan ya da yaşamın ilk yıllarında başlayan işitme kayıpları bireyin konuşmayı anlama, ana dilini edinme ve bilişsel becerilerinin gelişimi üzerinde olumsuz etkiler yaratmaktadır. İşitme engelli bireyler, dili edinebilme, sesli uyaranları normal ortamlarda algılayarak o uyaranlara uygun tepkide bulunabilme becerilerini geliştirebilmek için özel eğitime ihtiyaç duymaktadır",
+  },
+
+  {
+    title: "Bedensel Engelli Bireyler Destek Eğitim Programı",
+    image: "images/bedensel.jpg",
+    tag: "bedensel",
+    content:
+      "Eğitim, bireyin davranışlarında kendi yaşantısı yoluyla istenilen yönde değişim oluşturma sürecidir. Bireyin ihtiyaçlarının karşılanmasında birincil etken bireyin gereksinimi olan eğitimin sağlanabilmesidir. Her birey gibi özel eğitime ihtiyacı olan bireylerin de kendine özgü özellikleri, ilgi, yetenek ve öğrenme ihtiyaçları bulunmaktadır",
   },
 ];
 
@@ -88,12 +113,10 @@ app.get("/about", function (req, res) {
   res.render("about", { content: aboutContent, programs: aboutPrograms });
 });
 
-app
-  .route("/employee")
-  .get(function (req, res) {
+app.route("/employee").get(function (req, res) {
   Stuff.find({}, function (err, stuffs) {
-    res.render( "employee",{
-      foundStuff: stuffs
+    res.render("employee", {
+      foundStuff: stuffs,
     });
   });
 });
@@ -112,15 +135,20 @@ app.get("/service", function (req, res) {
 });
 
 app.get("/zihinsel", function (req, res) {
-  res.render("zihinsel", { });
+  res.render("zihinsel", {});
 });
 
 app.get("/yaygin", function (req, res) {
-  res.render("yaygin", {  });
+  res.render("yaygin", {});
 });
 
+app.get("/isitme", function (req, res) {
+  res.render("isitme", {});
+});
 
-
+app.get("/bedensel", function (req, res) {
+  res.render("bedensel", {});
+});
 app.listen(3000, function () {
   console.log("Server started on port 3000");
 });
