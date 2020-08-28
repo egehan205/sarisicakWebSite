@@ -38,7 +38,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <!-- 6 -->
-          <li class="nav-item active" id="home">
+          <li <% if(active=="home") {%>  class="nav-item active" <% } else {%> class="nav-item" <% }%>  id="home">
             <a class="nav-link" href="/">
               <img
                 src="https://img.icons8.com/material-sharp/24/000000/home-page.png"
@@ -46,7 +46,7 @@
               ANASAYFA</a
             >
           </li>
-          <li class="nav-item dropdown active" id="about">
+          <li  <% if(active=="about") {%>  class="nav-item dropdown active" <% } else {%> class="nav-item dropdown" <% }%> id="about">
             <a
               class="nav-link dropdown-toggle"
               href="#"
@@ -79,13 +79,15 @@
                   <a class="dropdown-item" href="/bedensel"
                     >Bedensel Engelli Bireyler Destek Eğitim Programı</a
                   >
+                  <a class="dropdown-item" href="/ozgul">Özgül Öğrenme Güçlüğü Destek Eğitim Programı</a>
+                  
                 </div>
               </div>
               <a class="dropdown-item" href="/vision">Vizyonumuz</a>
               <a class="dropdown-item" href="/mission">Misyonumuz</a>
             </div>
           </li>
-          <li class="nav-item active" id="employee">
+          <li <% if(active=="employee") {%>  class="nav-item active" <% } else {%> class="nav-item" <% }%> id="employee">
             <a class="nav-link" href="/employee">
               <img
                 src="https://img.icons8.com/material-sharp/24/000000/conference-background-selected.png"
@@ -93,7 +95,7 @@
               KADROMUZ</a
             >
           </li>
-          <li class="nav-item active" id="activities">
+          <li <% if(active=="activities") {%>  class="nav-item active" <% } else {%> class="nav-item" <% }%> id="activities">
             <a class="nav-link" href="/activities"
               ><img
                 src="https://img.icons8.com/ios-glyphs/24/000000/camera.png"
@@ -101,7 +103,7 @@
               ETKİNLİKLER</a
             >
           </li>
-          <li class="nav-item active" id="contact">
+          <li <% if(active=="contact") {%>  class="nav-item active" <% } else {%> class="nav-item" <% }%> id="contact">
             <a class="nav-link" href="/contact"
               ><img
                 src="https://img.icons8.com/fluent-systems-filled/24/000000/phone.png"
@@ -117,6 +119,4 @@
       </div>
     </nav>
 
-    <body></body>
-  </head>
-</html>
+    <body>

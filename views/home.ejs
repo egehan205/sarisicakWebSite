@@ -1,4 +1,4 @@
-<%- include("partials/header") -%>
+<%- include("partials/header" , {active:"home"}) -%>
 <div class="carousel-container">
   <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -10,6 +10,7 @@
       <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
       <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
     </ol>
     <div class="carousel-inner">
       <div class="carousel-item active">
@@ -61,6 +62,17 @@
           </h5>
         </div>
       </div>
+
+      <div class="carousel-item">
+        <a href="/ozgul"><img src="images/ogrenme3.jpg" class="d-block w-100" alt="..." /></a>
+      
+        <div class="carousel-caption d-none d-md-block">
+          <h5>
+            Özgül Öğrenme Güçlüğü Destek Eğitim Programı
+          </h5>
+        </div>
+      </div>
+
     </div>
     <a
       class="carousel-control-prev"
@@ -97,7 +109,7 @@
       <div class="col-sm-8 col-2" id="right">
         <p>
           <%= post.content %> ...
-          <a href="/posts/<%=post.tag%>">Daha fazla oku</a>
+          <a href="/<%=post.tag%>">Daha fazla oku</a>
         </p>
       </div>
     </div>
@@ -127,7 +139,7 @@
   </p>
 
   <a href="/about">Hakkımızda Daha Fazla Bilgi Edinmek için...</a>
-  <br />
-  <a href="/contact">İletişim Bilgilerimiz</a>
+  
+  
   <%-include("partials/footer") -%>
 </div>

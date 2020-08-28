@@ -45,7 +45,7 @@ posts = [
   {
     title: "İşitme Engelli Bireyler Destek Eğitim Programı",
     image: "images/isitme2.jpg",
-    tag: "isitsel",
+    tag: "isitme",
     content:
       "Doğuştan olan ya da yaşamın ilk yıllarında başlayan işitme kayıpları bireyin konuşmayı anlama, ana dilini edinme ve bilişsel becerilerinin gelişimi üzerinde olumsuz etkiler yaratmaktadır. İşitme engelli bireyler, dili edinebilme, sesli uyaranları normal ortamlarda algılayarak o uyaranlara uygun tepkide bulunabilme becerilerini geliştirebilmek için özel eğitime ihtiyaç duymaktadır",
   },
@@ -55,7 +55,15 @@ posts = [
     image: "images/bedensel.jpg",
     tag: "bedensel",
     content:
-      "Eğitim, bireyin davranışlarında kendi yaşantısı yoluyla istenilen yönde değişim oluşturma sürecidir. Bireyin ihtiyaçlarının karşılanmasında birincil etken bireyin gereksinimi olan eğitimin sağlanabilmesidir. Her birey gibi özel eğitime ihtiyacı olan bireylerin de kendine özgü özellikleri, ilgi, yetenek ve öğrenme ihtiyaçları bulunmaktadır",
+      "Bedensel engelli bireylerin genel özelliklerinin çok geniş bir yelpazede çeşitlilik göstermesi, yaşam kalitelerinin arttırılması ve belli bir düzeyde tutulması gereğinden hareketle Bedensel Engelli Bireyler Destek Eğitim Programına duyulan ihtiyacın önemi ortaya çıkmaktadır. Bedensel engelli bireylerin var olan kaba ve ince motor becerilerini artırmak, belirli bir düzeyde tutmak ve kullandığı tüm ortopedik araç ve gereçlerden en iyi şekilde yararlanmalarını sağlamak için eğitimin desenlenmesi gerekmektedir.",
+  },
+
+  {
+    title: "Özgül Öğrenme Güçlüğü Destek Eğitim Programı",
+    image: "images/ogrenme2.jpg",
+    tag: "ozgul",
+    content:
+      "Eğitim, bireyin davranışlarında kendi yaşantısı yoluyla istenilen önde değişim oluşturma sürecidir.Bireyin ihtiyaçlarının karşılanmasında birincil etken, bireyin gereksinimi olan eğitimin sağlanabilmesidir.Her birey gibi özel eğitime ihtiyacı olan bireylerin de kendilerine özgü özellikleri, ilgileri, yetenekleri, öğrenme ihtiyaçları ve hakları bulunmaktadır.Çağdaş eğitim anlayışı gereği, özel eğitime ihtiyacı olan bireylerin bu özellik ve ihtiyaç çeşitliliği dikkate alınarak “bireyi merkez alan” eğitim modeliyle öğrenimlerini sürdürmeleri en doğal haklarıdır.",
   },
 ];
 
@@ -90,7 +98,7 @@ const stuff = new Stuff({
 //   if (err) {
 //     console.log(err);
 //   } else {
-//     // console.log(fruits);
+//     console.log(fruits);
 //     mongoose.connection.close();
 //     stuff.forEach(function (stuff) {
 //       console.log(stuff._id);
@@ -130,9 +138,6 @@ app.get("/mission", function (req, res) {
 app.get("/vision", function (req, res) {
   res.render("vision", { content: aboutContent });
 });
-app.get("/service", function (req, res) {
-  res.render("service", { content: aboutContent });
-});
 
 app.get("/zihinsel", function (req, res) {
   res.render("zihinsel", {});
@@ -149,6 +154,11 @@ app.get("/isitme", function (req, res) {
 app.get("/bedensel", function (req, res) {
   res.render("bedensel", {});
 });
+
+app.get("/ozgul", function (req, res) {
+  res.render("ozgul", {});
+});
+
 app.listen(3000, function () {
   console.log("Server started on port 3000");
 });
