@@ -214,6 +214,12 @@ button.navbar-toggler {
   width: 3rem !important;
 }
 
+.staff-rank {
+  text-decoration: underline;
+  text-align: center;
+  color: #ffb11f;
+}
+
 @media screen and (max-width: 1400px) {
   .ata_image {
     display: none !important;

@@ -84,14 +84,17 @@ mongoose.connect("mongodb://localhost:27017/stuffDB", {
 const stuffSchema = {
   name: String,
   department: String,
+  rank: Number,
 };
 
 const Stuff = mongoose.model("Stuff", stuffSchema);
 
 const stuff = new Stuff({
-  name: "Egehan Karaköse",
-  department: "Developer",
+  name: "asasdd aqwesd",
+  department: "asdqewqasdasd",
+  rank: 1,
 });
+
 //stuff.save();
 
 // Stuff.find(function (err, stuff) {
@@ -123,8 +126,26 @@ app.get("/about", function (req, res) {
 
 app.route("/employee").get(function (req, res) {
   Stuff.find({}, function (err, stuffs) {
+    var rank0 = [];
+    var rank1 = [];
+    var rank2 = [];
+    stuffs.forEach(function (stuff) {
+      switch (stuff.rank) {
+        case 0:
+          rank0.push(stuff);
+          break;
+        case 1:
+          rank1.push(stuff);
+          break;
+        case 2:
+          rank2.push(stuff);
+          break;
+        default:
+          break;
+      }
+    });
     res.render("employee", {
-      foundStuff: stuffs,
+      foundStuff: [rank0, rank1, rank2],
     });
   });
 });
