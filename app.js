@@ -89,10 +89,42 @@ const stuffSchema = {
 
 const Stuff = mongoose.model("Stuff", stuffSchema);
 
+var names = [
+  "Dürdane Serçin",
+  "Fatme Hazer",
+  "Gülden Şahin Özdemir",
+  "Gülfidan Güneş",
+  "Gülgün Saydam",
+  "Gülsün Çayırlı Özcan",
+  "Gülşah Küçük",
+  "Hüseyin Bardakçı",
+  "Hüseyin Gökbel",
+  "İlhan Bulut",
+  "Medine Bozdemir",
+  "Olgun Gezgin",
+  "Ömer Ölgün",
+  "Özge Kalınağıl",
+  "Saffet Kozak",
+  "Semra Yüksel",
+  "Seren Daban",
+  "Serhat Taş",
+  "Songül Bozkurt",
+  "Tahsin Keleş",
+];
+
+// names.forEach(function (name) {
+//   const stuff = new Stuff({
+//     name: name,
+//     department: "asdqewqasdasd",
+//     rank: 1,
+//   });
+//   stuff.save();
+// });
+
 const stuff = new Stuff({
-  name: "asasdd aqwesd",
-  department: "asdqewqasdasd",
-  rank: 1,
+  name: "İlkay Karaköse",
+  department: "adasdasdasd",
+  rank: 0,
 });
 
 //stuff.save();
@@ -101,10 +133,10 @@ const stuff = new Stuff({
 //   if (err) {
 //     console.log(err);
 //   } else {
-//     console.log(fruits);
+
 //     mongoose.connection.close();
 //     stuff.forEach(function (stuff) {
-//       console.log(stuff._id);
+//       console.log(stuff.name + " " + stuff._id);
 //     });
 //   }
 // });
