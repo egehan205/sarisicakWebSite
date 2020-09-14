@@ -161,6 +161,7 @@ app.route("/employee").get(function (req, res) {
     var rank0 = [];
     var rank1 = [];
     var rank2 = [];
+    var rank3 = [];
     stuffs.forEach(function (stuff) {
       switch (stuff.rank) {
         case 0:
@@ -172,12 +173,15 @@ app.route("/employee").get(function (req, res) {
         case 2:
           rank2.push(stuff);
           break;
+        case 3:
+          rank3.push(stuff);
+          break;
         default:
           break;
       }
     });
     res.render("employee", {
-      foundStuff: [rank0, rank1, rank2],
+      foundStuff: [rank0, rank1, rank2, rank3],
     });
   });
 });
@@ -210,6 +214,10 @@ app.get("/bedensel", function (req, res) {
 
 app.get("/ozgul", function (req, res) {
   res.render("ozgul", {});
+});
+
+app.get("/activity", function (req, res) {
+  res.render("activity", {});
 });
 
 app.listen(3000, function () {

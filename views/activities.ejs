@@ -1,7 +1,22 @@
 <%- include("partials/header", {active:"activities"}) -%>
 <div class="container">
-    <h1>Etkinlikler</h1>
-    <br>
-    <p><%= content %></p>
+  <h1>Etkinlikler</h1>
+  <br />
+  <div class="row">
+    <div class="col-md-3 mx-auto">
+      <a  href="/activity" class="card p-1" style="max-width: 15rem; height: 20rem">
+        <img
+          class="card-img-top"
+          src="images/Activities/zihinselengeliler.jpg"
+          alt="Card image cap"
+          height="250px"
+        />
+        <div class="card-body">
+          <h5 class="card-title">ZihinselEngelliler</h5>
+        </div>
+    </a>
+    </div>
+  </div>
 
-    <%- include("partials/footer") -%>
+  <%- include("partials/footer") -%>
+
