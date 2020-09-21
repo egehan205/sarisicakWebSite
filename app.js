@@ -5,6 +5,7 @@ const bodyParser = require("body-parser");
 const ejs = require("ejs");
 const _ = require("lodash");
 const mongoose = require("mongoose");
+const { forEach } = require("lodash");
 
 const homeStartingContent = "";
 const aboutContent = [
@@ -20,6 +21,7 @@ const aboutPrograms = [
   "Yaygın Gelişimsel Bozukluklar Destek Eğitim Programı",
   "İşitme Engelli Bireyler Destek Eğitim Programı",
   "Bedensel Engelli Bireyler Destek Eğitim Programı",
+  "Özgül Öğrenme Güçlüğü Destek Eğitim Programı"
 ];
 const contactContent = "";
 
@@ -87,45 +89,39 @@ const stuffSchema = {
   rank: Number,
 };
 
-const Stuff = mongoose.model("Stuff", stuffSchema);
+const imagesSchema = {
+  name: String,
+};
+const gallerySchema = {
+  name: String,
+  images: [imagesSchema],
+};
 
-var names = [
-  "Dürdane Serçin",
-  "Fatme Hazer",
-  "Gülden Şahin Özdemir",
-  "Gülfidan Güneş",
-  "Gülgün Saydam",
-  "Gülsün Çayırlı Özcan",
-  "Gülşah Küçük",
-  "Hüseyin Bardakçı",
-  "Hüseyin Gökbel",
-  "İlhan Bulut",
-  "Medine Bozdemir",
-  "Olgun Gezgin",
-  "Ömer Ölgün",
-  "Özge Kalınağıl",
-  "Saffet Kozak",
-  "Semra Yüksel",
-  "Seren Daban",
-  "Serhat Taş",
-  "Songül Bozkurt",
-  "Tahsin Keleş",
-];
+const Stuff = mongoose.model("Stuff", stuffSchema);
+const Image = mongoose.model("Image", imagesSchema);
+const Gallery = mongoose.model("Gallery", gallerySchema);
+
+//gallery.save();
+// var items = [];
 
 // names.forEach(function (name) {
-//   const stuff = new Stuff({
+//   const image = new Image({
 //     name: name,
-//     department: "asdqewqasdasd",
-//     rank: 1,
 //   });
-//   stuff.save();
+//   items.push(image);
 // });
 
-const stuff = new Stuff({
-  name: "İlkay Karaköse",
-  department: "adasdasdasd",
-  rank: 0,
-});
+// const gallery = new Gallery({
+//   name: "Kurumumuz",
+//   images: items,
+// });
+//gallery.save();
+
+// const stuff = new Stuff({
+//   name: "İlkay Karaköse",
+//   department: "adasdasdasd",
+//   rank: 0,
+// });
 
 //stuff.save();
 
@@ -187,7 +183,14 @@ app.route("/employee").get(function (req, res) {
 });
 
 app.get("/activities", function (req, res) {
-  res.render("activities", { content: aboutContent });
+  Gallery.find({}, function (err, galleries) {
+    var gallery = [];
+    galleries.forEach(function (gal) {
+      gallery.push(gal);
+    });
+
+    res.render("activities", { gallery: gallery });
+  });
 });
 app.get("/mission", function (req, res) {
   res.render("mission", { content: aboutContent });
@@ -216,8 +219,19 @@ app.get("/ozgul", function (req, res) {
   res.render("ozgul", {});
 });
 
-app.get("/activity", function (req, res) {
-  res.render("activity", {});
+app.get("/activity/:activityName", function (req, res) {
+  const activityName = req.params.activityName;
+  Gallery.findOne({ name: activityName }, function (err, foundList) {
+    if (!err) {
+      if (!foundList) {
+      } else {
+        res.render("activity", {
+          name: foundList.name,
+          images: foundList.images,
+        });
+      }
+    }
+  });
 });
 
 app.listen(3000, function () {
