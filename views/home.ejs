@@ -103,10 +103,10 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-sm-4 col-2" id="left">
-        <img src="<%= post.image  %>" width="300px" alt="" />
+      <div class="col-lg-4 col-12 col-2" id="left">
+        <img src="<%= post.image  %>" width="100%" class="img-services" alt="" />
       </div>
-      <div class="col-sm-8 col-2" id="right">
+      <div class="col-lg-8 col-12 col-2" id="right">
         <p>
           <%= post.content %> ...
           <a href="/<%=post.tag%>">Daha fazla oku</a>
@@ -137,9 +137,10 @@
     fazlasıyla sunan merkezimiz, yılların tecrübesiyle sizin her zaman
     yanınızda.
   </p>
+  <br>
 
   <a href="/about">Hakkımızda Daha Fazla Bilgi Edinmek için...</a>
-  
+  <br>
   
   <%-include("partials/footer") -%>
 

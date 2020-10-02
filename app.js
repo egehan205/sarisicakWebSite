@@ -21,7 +21,7 @@ const aboutPrograms = [
   "Yaygın Gelişimsel Bozukluklar Destek Eğitim Programı",
   "İşitme Engelli Bireyler Destek Eğitim Programı",
   "Bedensel Engelli Bireyler Destek Eğitim Programı",
-  "Özgül Öğrenme Güçlüğü Destek Eğitim Programı"
+  "Özgül Öğrenme Güçlüğü Destek Eğitim Programı",
 ];
 const contactContent = "";
 
@@ -33,7 +33,7 @@ posts = [
     image: "images/egitim-down-sendromu.jpg",
     tag: "zihinsel",
     content:
-      "Eğitim, önceden belirlenmiş amaçlara göre insanların davranışlarında belli gelişmeler sağlamaya yarayan planlı etkinliklerdir. Ayrıca eğitim, bireylerin toplumun normlarını, standartlarını ve yaşama yollarını kazanmasında etkili olan tüm sosyal süreçlerdir. Bireyin yaşadığı toplum içinde değeri olan yetenek ve diğer davranış biçimleri geliştirdiği süreçlerin tamamı eğitim aracılığıyla edinilir",
+      "Eğitim, önceden belirlenmiş amaçlara göre insanların davranışlarında belli gelişmeler sağlamaya yarayan planlı etkinliklerdir. Ayrıca eğitim, bireylerin toplumun normlarını, standartlarını ve yaşama yollarını kazanmasında etkili olan tüm sosyal süreçlerdir. Bireyin yaşadığı toplum içinde değeri olan yetenek ve diğer davranış biçimleri geliştirdiği süreçlerin tamamı eğitim aracılığıyla edinilir. Tüm bireyler gibi zihinsel yetersizliği olan bireylerin de aynı aşamalardan geçmeleri söz konusudur. Ancak zihinsel yetersizliği olan bireylerin tüm bu aşamalarda yaşıtlarından daha farklı süreçlerden geçtiği bilinmektedir.Özel eğitime gereksinimi olan bireylerin eğitim ve sosyal ihtiyaçlarını karşılamak için özel olarak yetiştirilmiş personel, geliştirilmiş eğitim programları ve yöntemleri, bu bireylerin tüm gelişim alanlarındaki özellikleri ile akademik disiplin alanlarındaki yeterliliklerine dayalı olarak uygun ortamlarda sürdürülen eğitim özel eğitimdir.",
   },
 
   {
@@ -41,7 +41,7 @@ posts = [
     image: "images/ogrenmegüclügü.jpg",
     tag: "yaygin",
     content:
-      "Bireylerin, var olan yeterliklerinin en üst düzeyde geliştirilerek sosyal yaşama etkin katılımının artırılmasının temel yolu eğitimdir. Özel eğitime ihtiyacı olan tüm bireylerde olduğu gibi yaygın gelişimsel bozukluğu (YGB) olan bireylerde de eğitim ve ev ortamları uygun şekilde yapılandırıldığında, işlevsel eğitim programları geliştirildiğinde, öğretim süreci bireysellik esasına göre hazırlandığında, bağımsız yaşam becerilerinin edinilmesi ve toplumsal entegrasyon bağlamında önemli ilerlemeler kaydedilmektedir",
+      "Bireylerin, var olan yeterliklerinin en üst düzeyde geliştirilerek sosyal yaşama etkin katılımının artırılmasının temel yolu eğitimdir. Özel eğitime ihtiyacı olan tüm bireylerde olduğu gibi yaygın gelişimsel bozukluğu (YGB) olan bireylerde de eğitim ve ev ortamları uygun şekilde yapılandırıldığında, işlevsel eğitim programları geliştirildiğinde, öğretim süreci bireysellik esasına göre hazırlandığında, bağımsız yaşam becerilerinin edinilmesi ve toplumsal entegrasyon bağlamında önemli ilerlemeler kaydedilmektedir. Yaygın gelişimsel bozukluğu olan bireylerin bağımsız yaşam becerilerini geliştirmeleri, davranış problemlerinin azaltılarak gereksinimleri olan beceriler kazanabilmeleri, uygun eğitim programlarıyla bütünleştirilmiş, yapılandırılmış ve zenginleştirilmiş öğretim ortamlarının erken yaştan itibaren sağlanmasıyla doğrudan ilişkilidir. Yaygın gelişimsel bozukluk gösteren bireylerin, tanı aldıkları ilk andan itibaren destek eğitim programlarına alınarak gelişimlerinin desteklenmeleri gerekmektedir. Bireyin örgün eğitime dâhil olduktan sonra da düzeyine/tanısına uygun destek eğitim programlarına katılması, gelişiminin en üst düzeyde desteklenmesini sağlayacaktır.",
   },
 
   {
@@ -49,7 +49,7 @@ posts = [
     image: "images/isitme2.jpg",
     tag: "isitme",
     content:
-      "Doğuştan olan ya da yaşamın ilk yıllarında başlayan işitme kayıpları bireyin konuşmayı anlama, ana dilini edinme ve bilişsel becerilerinin gelişimi üzerinde olumsuz etkiler yaratmaktadır. İşitme engelli bireyler, dili edinebilme, sesli uyaranları normal ortamlarda algılayarak o uyaranlara uygun tepkide bulunabilme becerilerini geliştirebilmek için özel eğitime ihtiyaç duymaktadır",
+      "Doğuştan olan ya da yaşamın ilk yıllarında başlayan işitme kayıpları bireyin konuşmayı anlama, ana dilini edinme ve bilişsel becerilerinin gelişimi üzerinde olumsuz etkiler yaratmaktadır. İşitme engelli bireyler, dili edinebilme, sesli uyaranları normal ortamlarda algılayarak o uyaranlara uygun tepkide bulunabilme becerilerini geliştirebilmek için özel eğitime ihtiyaç duymaktadır. Günümüzde işitme kaybı tanısı birçok bireye küçük yaşlarda hatta doğumda konulabilmekte, işitme cihazları ile daha iyi işitmeleri sağlanabilmektedir.Bireyin özel eğitim, aile eğitimi ve destek eğitim ile konuşmayı algılaması ve konuşmayı öğrenmesi, bu yolla iletişim kurması, işitme kaybının derecesine ve sağlanan erken eğitim hizmetlerinin etkinliğine bağlı olarak çeşitli düzeylerde mümkün olabilmektedir.",
   },
 
   {
@@ -57,7 +57,7 @@ posts = [
     image: "images/bedensel.jpg",
     tag: "bedensel",
     content:
-      "Bedensel engelli bireylerin genel özelliklerinin çok geniş bir yelpazede çeşitlilik göstermesi, yaşam kalitelerinin arttırılması ve belli bir düzeyde tutulması gereğinden hareketle Bedensel Engelli Bireyler Destek Eğitim Programına duyulan ihtiyacın önemi ortaya çıkmaktadır. Bedensel engelli bireylerin var olan kaba ve ince motor becerilerini artırmak, belirli bir düzeyde tutmak ve kullandığı tüm ortopedik araç ve gereçlerden en iyi şekilde yararlanmalarını sağlamak için eğitimin desenlenmesi gerekmektedir.",
+      "Eğitim, bireyin davranışlarında kendi yaşantısı yoluyla istenilen yönde değişim oluşturma sürecidir. Bireyin ihtiyaçlarının karşılanmasında birincil etken bireyin gereksinimi olan eğitimin sağlanabilmesidir. Her birey gibi özel eğitime ihtiyacı olan bireylerin de kendine özgü özellikleri, ilgi, yetenek ve öğrenme ihtiyaçları bulunmaktadır. Çağdaş eğitim anlayışı gereği, özel eğitime ihtiyacı olan bireylerin bu özellik ve ihtiyaç çeşitliliği dikkate alınarak “bireyi merkez alan” eğitim modeliyle öğrenimlerini sürdürmeleri en doğal haklarıdır. Bedensel engelli bireylerin genel özelliklerinin çok geniş bir yelpazede çeşitlilik göstermesi, yaşam kalitelerinin arttırılması ve belli bir düzeyde tutulması gereğinden hareketle Bedensel Engelli Bireyler Destek Eğitim Programına duyulan ihtiyacın önemi ortaya çıkmaktadır.",
   },
 
   {
@@ -65,7 +65,7 @@ posts = [
     image: "images/ogrenme2.jpg",
     tag: "ozgul",
     content:
-      "Eğitim, bireyin davranışlarında kendi yaşantısı yoluyla istenilen önde değişim oluşturma sürecidir.Bireyin ihtiyaçlarının karşılanmasında birincil etken, bireyin gereksinimi olan eğitimin sağlanabilmesidir.Her birey gibi özel eğitime ihtiyacı olan bireylerin de kendilerine özgü özellikleri, ilgileri, yetenekleri, öğrenme ihtiyaçları ve hakları bulunmaktadır.Çağdaş eğitim anlayışı gereği, özel eğitime ihtiyacı olan bireylerin bu özellik ve ihtiyaç çeşitliliği dikkate alınarak “bireyi merkez alan” eğitim modeliyle öğrenimlerini sürdürmeleri en doğal haklarıdır.",
+      "Eğitim, bireyin davranışlarında kendi yaşantısı yoluyla istenilen önde değişim oluşturma sürecidir. Bireyin ihtiyaçlarının karşılanmasında birincil etken, bireyin gereksinimi olan eğitimin sağlanabilmesidir. Her birey gibi özel eğitime ihtiyacı olan bireylerin de kendilerine özgü özellikleri, ilgileri, yetenekleri, öğrenme ihtiyaçları ve hakları bulunmaktadır. Çağdaş eğitim anlayışı gereği, özel eğitime ihtiyacı olan bireylerin bu özellik ve ihtiyaç çeşitliliği dikkate alınarak “bireyi merkez alan” eğitim modeliyle öğrenimlerini sürdürmeleri en doğal haklarıdır. Özel öğrenme güçlüğü olan bireyler dili yazılı ya da sözlü anlama ve kullanabilme için gerekli olan bilgi alma süreçlerinin birinde veya birkaçında sorun yaşarlar.Özel öğrenme güçlüğünün bireyin dinleme, konuşma, okuma, yazma, heceleme, dikkat yoğunlaştırma, matematik, akıl yürütme, motor ve organizasyon becerilerini olumsuz etkileyen yapısal bir sorun olması nedeniyle, bu güçlüğü olan bireyler örgün eğitim programlarında zekâ düzeyine ve yaşıtlarına oranla düşük başarı göstermektedir..",
   },
 ];
 
@@ -78,10 +78,13 @@ app.set("view engine", "ejs");
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost:27017/stuffDB", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "mongodb+srv://admin-egehan:egehan205@cluster0.ofoxv.mongodb.net/stuffDB",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
 const stuffSchema = {
   name: String,
@@ -101,7 +104,6 @@ const Stuff = mongoose.model("Stuff", stuffSchema);
 const Image = mongoose.model("Image", imagesSchema);
 const Gallery = mongoose.model("Gallery", gallerySchema);
 
-//gallery.save();
 // var items = [];
 
 // names.forEach(function (name) {
@@ -115,15 +117,15 @@ const Gallery = mongoose.model("Gallery", gallerySchema);
 //   name: "Kurumumuz",
 //   images: items,
 // });
-//gallery.save();
+// gallery.save();
 
 // const stuff = new Stuff({
-//   name: "İlkay Karaköse",
+//   name: "Simge Tepe",
 //   department: "adasdasdasd",
-//   rank: 0,
+//   rank: 1,
 // });
 
-//stuff.save();
+// stuff.save();
 
 // Stuff.find(function (err, stuff) {
 //   if (err) {
@@ -188,6 +190,14 @@ app.get("/activities", function (req, res) {
     galleries.forEach(function (gal) {
       gallery.push(gal);
     });
+    gallery = gallery.sort(function (a, b) {
+      var nameA = a.name.toLowerCase(), nameB = b.name.toLowerCase()
+      if (nameA > nameB) //sort string ascending
+        return -1
+      if (nameA < nameB)
+        return 1
+      return 0 //default return value (no sorting)
+    })
 
     res.render("activities", { gallery: gallery });
   });
@@ -222,6 +232,7 @@ app.get("/ozgul", function (req, res) {
 app.get("/activity/:activityName", function (req, res) {
   const activityName = req.params.activityName;
   Gallery.findOne({ name: activityName }, function (err, foundList) {
+   
     if (!err) {
       if (!foundList) {
       } else {
