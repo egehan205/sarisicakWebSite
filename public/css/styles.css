@@ -88,7 +88,7 @@ li {
   color: #2e4dd4;
 }
 
-.tel-no a{
+.tel-no a {
   color: #000000;
   font-size: 0.9rem;
 }
@@ -247,7 +247,7 @@ button.navbar-toggler {
   color: #ffb11f;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1400px) {
   .ata_image {
     display: none !important;
   }
