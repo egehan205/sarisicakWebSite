@@ -86,6 +86,11 @@ mongoose.connect(
   }
 );
 
+// mongoose.connect("mongodb://localhost:27017/stuffDB", {
+//   useNewUrlParser: true,
+//   useUnifiedTopology: true,
+// });
+
 const stuffSchema = {
   name: String,
   department: String,
@@ -114,7 +119,7 @@ const Gallery = mongoose.model("Gallery", gallerySchema);
 // });
 
 // const gallery = new Gallery({
-//   name: "Kurumumuz",
+//   name: "Gezilerimiz",
 //   images: items,
 // });
 // gallery.save();
@@ -191,13 +196,14 @@ app.get("/activities", function (req, res) {
       gallery.push(gal);
     });
     gallery = gallery.sort(function (a, b) {
-      var nameA = a.name.toLowerCase(), nameB = b.name.toLowerCase()
-      if (nameA > nameB) //sort string ascending
-        return -1
-      if (nameA < nameB)
-        return 1
-      return 0 //default return value (no sorting)
-    })
+      var nameA = a.name.toLowerCase(),
+        nameB = b.name.toLowerCase();
+      if (nameA > nameB)
+        //sort string ascending
+        return -1;
+      if (nameA < nameB) return 1;
+      return 0; //default return value (no sorting)
+    });
 
     res.render("activities", { gallery: gallery });
   });
@@ -232,7 +238,6 @@ app.get("/ozgul", function (req, res) {
 app.get("/activity/:activityName", function (req, res) {
   const activityName = req.params.activityName;
   Gallery.findOne({ name: activityName }, function (err, foundList) {
-   
     if (!err) {
       if (!foundList) {
       } else {
@@ -249,7 +254,6 @@ let port = process.env.PORT;
 if (port == null || port == "") {
   port = 3000;
 }
-
 
 app.listen(port, function () {
   console.log("Server has started successfully");
