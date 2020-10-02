@@ -247,7 +247,7 @@ button.navbar-toggler {
   color: #ffb11f;
 }
 
-@media screen and (max-width: 1400px) {
+@media screen and (max-width: 1300px) {
   .ata_image {
     display: none !important;
   }

@@ -24,7 +24,7 @@
   </div>
   <br />
   <br />
-  <h3 class="staff-rank">Eğitmen Kadrosu</h3>
+  <h3 class="staff-rank">Öğretmen Kadrosu</h3>
   <br />
 
   <% for(var i = 0; i < foundStuff[1].length; i++) { %> <% if (i === 0 || i % 4
@@ -81,10 +81,34 @@
   
   <% }%> <% } %>
 </div>
+<br />
+<br />
+<h3 class="staff-rank">İdari Yardımcı Personel Kadrosu</h3>
+<br />
+<% for(var i = 0; i < foundStuff[4].length; i++) { %> <% if (i === 0 || i % 4
+  === 0) { %>
+
+<div class="row">
+  <% } %>
+  <div class="col-md-3">
+    <div class="card p-1" style="max-width: 15rem; height : 24rem; ">
+      <img class="card-img-top" src="images/Stuff/<%= foundStuff[4][i]._id %>.jpg" alt="Card image cap"
+        height="250px" />
+      <div class="card-body">
+        <h5 class="card-title"><%= foundStuff[4][i].name %></h5>
+        <p class="card-text"><%= foundStuff[4][i].department %></p>
+      </div>
+    </div>
+  </div>
+
+  <% if (i === 3 || i % 4 === 3) { %>
+</div>
+<% }%> <% } %>
+</div>
 
   <br />
   <br />
-  <h3 class="staff-rank">Personel Kadrosu</h3>
+  <h3 class="staff-rank">Yardımcı Personel Kadrosu</h3>
   <br />
   <% for(var i = 0; i < foundStuff[2].length; i++) { %> <% if (i === 0 || i % 4
   === 0) { %>

@@ -165,6 +165,8 @@ app.route("/employee").get(function (req, res) {
     var rank1 = [];
     var rank2 = [];
     var rank3 = [];
+    var rank4 = [];
+    
     stuffs.forEach(function (stuff) {
       switch (stuff.rank) {
         case 0:
@@ -179,12 +181,15 @@ app.route("/employee").get(function (req, res) {
         case 3:
           rank3.push(stuff);
           break;
+        case 4:
+          rank4.push(stuff);
+          break;
         default:
           break;
       }
     });
     res.render("employee", {
-      foundStuff: [rank0, rank1, rank2, rank3],
+      foundStuff: [rank0, rank1, rank2, rank3,rank4],
     });
   });
 });
